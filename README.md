@@ -49,7 +49,7 @@ Slug.slugify ?charmap: custom_map "Mm";;
 
 - ReasonML syntax
 
-```reasonml
+```reason
 Slug.slugify("my string");
 - : string = "my-string"
 
