@@ -29,5 +29,5 @@ setup.log
 _opam/
 
 # Esy
-**esy.lock
+*.esy.lock
 _esy
