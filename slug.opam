@@ -1,0 +1,24 @@
+opam-version: "2.0"
+name: "slug"
+authors: "Khoa Nguyen"
+homepage: "https://github.com/thangngoc89/ocaml-slug"
+maintainer: "hi@khoanguyen.me"
+dev-repo: "git+ssh://git@github.com:thangngoc89/ocaml-slug.git"
+bug-reports: "https://github.com/thangngoc89/ocaml-slug/issues"
+version: "0.1"
+build: [
+  [ "dune" "subst" ] {pinned}
+  [ "dune" "build" "-p" name "-j" jobs ]
+]
+depends: [
+  "dune" {build}
+  "opam-lock" {dev}
+  "yojson" {dev}
+  "ppx_inline_test" {test}
+
+  "uunf"
+  "uuseg"
+  "re"
+]
+synopsis: "Url safe slug generator"
+description: "Url safe slug generator"
