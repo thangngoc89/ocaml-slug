@@ -4,7 +4,7 @@
  (modules (:standard \ "data_generate"))
  (inline_tests)
  (preprocess (pps ppx_inline_test))
- (libraries yojson uunf.string uuseg.string re))
+ (libraries uunf.string uuseg.string re))
 
 
 (executable 
@@ -12,12 +12,7 @@
  (modules "data_generate")
  (libraries yojson))
 
-(rule
- (targets slug_data.ml)
- (deps data/charmap.json data/locales.json)
- (action (run ./data_generate.exe)))
-
-(rule
- (alias slug)
- (deps (universe) data/charmap.json data/locales.json)
- (action (run ./download.sh)))
+; (rule
+;  (targets slug_data.ml)
+;  (deps data/charmap.json data/locales.json)
+;  (action (run ./data_generate.exe)))

@@ -13,7 +13,7 @@ build: [
 depends: [
   "dune" {build}
   "opam-lock" {dev}
-  "yojson" 
+  "yojson" {dev}
   "ppx_inline_test"
 
   "uunf"
