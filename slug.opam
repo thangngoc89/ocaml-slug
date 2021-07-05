@@ -14,10 +14,11 @@ depends: [
   "dune" {build}
   "opam-lock" {dev}
   "yojson" {dev}
-  "ppx_inline_test" {test}
+  "ppx_inline_test"
 
   "uunf"
   "uuseg"
+  "uutf"
   "re"
 ]
 synopsis: "Url safe slug generator"
