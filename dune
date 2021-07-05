@@ -2,8 +2,6 @@
  (name slug)
  (public_name slug)
  (modules (:standard \ "data_generate"))
- (inline_tests)
- (preprocess (pps ppx_inline_test))
  (libraries uunf.string uuseg.string re))
 
 

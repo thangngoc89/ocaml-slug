@@ -1,3 +1,5 @@
+module Slug_data = Slug_data
+
 module Charmap = struct
   type t = (string, string) Hashtbl.t
 
@@ -29,24 +31,3 @@ let slugify ?(sep = "-") ?(charmap = Charmap.base) ?(lowercase = true) str =
   let str = Re.replace_string ~all:true (Re.Pcre.regexp "\\s+") ~by:sep str in
   let str = if lowercase then String.lowercase_ascii str else str in
   str
-
-(* Replace whitespaces with sep *)
-let%test _ = slugify "foo bar baz" = "foo-bar-baz"
-
-let%test _ = slugify ~sep:"_" "foo bar baz" = "foo_bar_baz"
-
-(* No duplicated seps *)
-let%test _ = slugify "foo , bar" = "foo-bar"
-
-(* Remove not allowed chars *)
-let%test _ = slugify "foo] - -- [ bar" = "foo-bar"
-
-(* Retain uppercases *)
-let%test _ = slugify ~lowercase:false "Foo Bar" = "Foo-Bar"
-
-(* Custom charmap *)
-let%test _ =
-  slugify
-    ~charmap:(Charmap.mk_charmap [ Slug_data.base; Slug_data.vi ])
-    "Việt Nam"
-  = "viet-nam"

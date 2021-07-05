@@ -14,7 +14,7 @@ depends: [
   "dune" {build}
   "opam-lock" {dev}
   "yojson" {dev}
-  "ppx_inline_test"
+  "alcotest" {with-test}
 
   "uunf"
   "uuseg"

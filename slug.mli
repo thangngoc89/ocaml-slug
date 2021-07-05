@@ -36,3 +36,5 @@ val slugify: ?sep: string -> ?charmap: Charmap.t -> ?lowercase: bool -> string -
     [sep] defaults to "-" 
     [charmap] defaults to [Charmap.base] 
     [lowercase] defaults to [true] *)
+
+module Slug_data: module type of Slug_data 
