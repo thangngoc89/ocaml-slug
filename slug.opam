@@ -11,7 +11,7 @@ build: [
   [ "dune" "build" "-p" name "-j" jobs ]
 ]
 depends: [
-  "dune"
+  "dune" {>= "2.0.0"}
   "opam-lock" {dev}
   "yojson" {dev}
   "alcotest" {with-test}
