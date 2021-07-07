@@ -1,6 +1,14 @@
 # ocaml-slug
 Url safe slug generator for OCaml
 
+> A URL slug is the part of a URL or link that comes after the domain extension.
+>
+> In websites the keyword used for your URL slug can be used to SEO optimize the URL by showing Google the structure of your site and the contents of the page in question.
+
+This library turns title into URL-safe slug with support for non-latin characters.
+
+
+
 This library uses algorithm and data from [node-slugify](https://github.com/simov/slugify)
 
 ## Installation
