@@ -5,19 +5,24 @@ maintainer: "hi@khoanguyen.me"
 dev-repo: "git+ssh://git@github.com:thangngoc89/ocaml-slug.git"
 bug-reports: "https://github.com/thangngoc89/ocaml-slug/issues"
 build: [
-  [ "dune" "subst" ] {pinned}
+  [ "dune" "subst" ] {dev}
   [ "dune" "build" "-p" name "-j" jobs ]
 ]
 depends: [
-  "dune" {>= "2.0.0"}
+   "ocaml" {>= "4.05"}
+  "dune" {>= "2.0"}
   "opam-lock" {dev}
   "yojson" {dev}
   "alcotest" {with-test}
 
-  "uunf"
+  "uunf" {>= "1.0.0"}
   "uuseg"
   "uutf"
-  "re"
+  "re" {>= "1.7.2"}
 ]
 synopsis: "Url safe slug generator"
-description: "Url safe slug generator"
+description: """
+A URL slug is the part of a URL or link that comes after the domain extension.
+
+In websites the keyword used for your URL slug can be used to SEO optimize the URL by showing Google the structure of your site and the contents of the page in question.
+"""
