@@ -3,7 +3,7 @@
     
     This library assumes all strings are UTF-8.
     General algorithm:
-    - Normalize input string with NFD (decompose form) to separate the accented part from base
+    - Normalize input string with NFC (compose form) 
     - Replace special characters that isn't url safe with a custom char map
     - Remove all non alphabets and numbers characters
     - Replace all whitespaces with [sep]
