@@ -19,7 +19,7 @@ let non_alphaNum = Re.Pcre.regexp {|[^A-Za-z0-9\s]|}
 
 let slugify ?(sep = "-") ?(charmap = Charmap.base) ?(lowercase = true) str =
   let str =
-    Uunf_string.normalize_utf_8 `NFD str
+    Uunf_string.normalize_utf_8 `NFC str
     |> Uuseg_string.fold_utf_8 `Grapheme_cluster
          (fun acc cluster ->
            match Hashtbl.find_opt charmap cluster with
